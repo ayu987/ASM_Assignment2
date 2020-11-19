@@ -1,5 +1,5 @@
 # ASM_Assignment2
-## Required Packags for R
+## Required Packages for R
 1. fitdistrplus
 2. actuar
 
