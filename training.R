@@ -6,10 +6,24 @@ model.fit <- function(data, distribution, method){
         return(model)
     }
 
-    if(distribution == "weibull"){
+    #this part is having errors.
+    if(distribution == "weibull" && method == "mme"){
         model <- fitdist(data[data>0], distr = distribution, method = method, lower = c(0,0), order=c(1,2),memp="momentfunc")
     }
 
     model <- fitdist(data[data>0], distr = distribution, method = method)
     return(model)
+}
+
+ks_test <- function(data, model){
+    data = #remove deuplicates
+    if(model$distname == 'gamma'){
+        return(ks.test(data, "pgamma", model$estimate["shape"], model$estimate["rate"]))
+    }
+    if(model$distname == "weibull"){
+        
+    }
+    if(model$distname == "exp"){
+
+    }
 }
