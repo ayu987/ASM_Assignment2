@@ -1,4 +1,8 @@
 # ASM_Assignment2
+## Required Packags for R
+1. fitdistrplus
+2. actuar
+
 ## File Descriptions
 1. main.R: This files calls and run all function together to get best parameters for selected probability distributions.
 2. data_transformation.R: This files imports and transforms data to be used for our work.
