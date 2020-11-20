@@ -1,17 +1,18 @@
 library(fitdistrplus)
 library(actuar)
+
 model.fit <- function(data, distribution, method){
     if((distribution == "gamma" || distribution == "weibull") && method == "mle"){
         model <- fitdist(data[data>0], distr = distribution, method = method, lower = c(0,0)) # start = list(scale = 1, shape = 1)
         return(model)
     }
 
-    #this part is having errors.
     if(distribution == "weibull" && method == "mme"){
-        model <- fitdist(data[data>0], distr = distribution, method = method, lower = c(0,0), order=c(1,2),memp="momentfunc")
+    memp  <-  function(x, order) mean(x^order) 
+    model<- fitdist(data[data>0], "weibull", method = "mme", order=c(1, 2), memp=memp, lower = c(0, 0))
     }
 
-    model <- fitdist(data[data>0], distr = distribution, method = method)
+    else model <- fitdist(data[data>0], distr = distribution, method = method)
     return(model)
 }
 
