@@ -60,4 +60,7 @@ ks_test <- function(data, model){
     if(model$distname == "chisq"){
         return(ks.test(data, "pchisq", model$estimate["ncp"], model$estimate["df"]))
     }
+    if(model$distname == "geom"){
+        return(ks.test(data, "pgeom", model$estimate["prob"]))
+    }
 }

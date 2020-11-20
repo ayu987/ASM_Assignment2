@@ -3,14 +3,14 @@ source("training.R")
 transform("data.csv", "_final_data.csv")
 
 data = read.csv("_final_data.csv")
-model = model.fit(data$Interevent_Count, "weibull", "mle")  #weibull, gamma, exp, invgauss, lnorm, norm, 
-                                                          #invweibull, pareto, chisq, 
+model = model.fit(data$Interevent_Count, "geom", "mme")  #weibull, gamma, exp, invgauss, lnorm, norm, 
+                                                          #invweibull, pareto, chisq, geom
 #plot(model)
 # summary(model)[2] = model$method # type of method used for parameter estimatin (mle/mme).
 # summary(model)[6] = log likelihood
 # summary(model)[7] = AIC
 # summary(model)[8] = BIC
 
-#model$estimate
+print(model$estimate)
 
-ks_test(data$Interevent_Count, model)
+print(ks_test(data$Interevent_Count, model))
