@@ -17,14 +17,14 @@ model.fit <- function(data, distribution, method){
 }
 
 ks_test <- function(data, model){
-    data = #remove deuplicates
+    #data = unique(data) #remove deuplicates
     if(model$distname == 'gamma'){
         return(ks.test(data, "pgamma", model$estimate["shape"], model$estimate["rate"]))
     }
     if(model$distname == "weibull"){
+        return(ks.test(data, "pweibull", model$estimate["shape"], model$estimate["scale"]))
+    }
+    #if(model$distname == "exp"){
         
-    }
-    if(model$distname == "exp"){
-
-    }
+    #}
 }
