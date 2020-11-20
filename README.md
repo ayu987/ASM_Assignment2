@@ -10,3 +10,17 @@
 
 ## Method/Function Descriptions:
 * **transform(input_file, output_file)**: This method takes location of input csv file and transforms the data into intervent time form and stores the resulting dataframe in **output_file**.
+
+* **model.fit(data, distribution, method)**: This methods takes distribution as input and fits the paramters using methods("mle/mme") on given data.
+
+### Supported Distributions by model.fit:
+1. Weibull Distribution (pass as "weibull")
+2. Gamma Distribution (pass as "gamma")
+3. Exponential Distribution (pass as "exp")
+4. Inverse Gaussian Distribution (pass as "invgauss")
+5. Log-normal Distribution (pass as "lnorm")
+6. Normal Distribution (pass as "norm")
+7. Inverse Weibull Distribution (pass as "invweibull")
+8. Pareto Distribution (pass as "pareto")
+9. Chi-Squared Distribution (pass as "chisq")
+10. Geometric Distribution (pass as "geom")
