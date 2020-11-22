@@ -35,6 +35,10 @@ model.fit <- function(data, distribution, method){
     memp  <-  function(x, order) mean(x^order)
     model<- fitdist(data[data>0], "expweibull", method = "mme", order=c(1, 2, 3), memp=memp, lower = c(0, 0, 0), start = list(kappa = 1, lambda = 1, alpha=1))
     }
+    else if(distribution == "eepg" && method == "mle"){
+    
+    model<- fitdist(data[data>0], distr="eepg", method = "mle", lower = c(0, 0), start=list(a = 1, spec="exp"))
+    }
 
     else model <- fitdist(data[data>0], distr = distribution, method = method)
     return(model)
@@ -45,34 +49,35 @@ ks_test <- function(data, model){
     if(model$distname == 'gamma'){
         return(ks.test(data, "pgamma", model$estimate["shape"], model$estimate["rate"]))
     }
-    if(model$distname == "weibull"){
+    else if(model$distname == "weibull"){
         return(ks.test(data, "pweibull", model$estimate["shape"], model$estimate["scale"]))
     }
-    if(model$distname == "exp"){
+    else if(model$distname == "exp"){
         return(ks.test(data, "pexp", model$estimate["rate"]))
     }
-    if(model$distname == "invgauss"){
+    else if(model$distname == "invgauss"){
         return(ks.test(data, "pinvgauss", model$estimate["mean"], model$estimate["shape"]))
     }
-    if(model$distname == "lnorm"){
+    else if(model$distname == "lnorm"){
         return(ks.test(data, "plnorm", model$estimate["meanlog"], model$estimate["sdlog"]))
     }
-    if(model$distname == "norm"){
+    else if(model$distname == "norm"){
         return(ks.test(data, "pnorm", model$estimate["mean"], model$estimate["sd"]))
     }
-    if(model$distname == "invweibull"){
+    else if(model$distname == "invweibull"){
         return(ks.test(data, "pinvweibull", model$estimate["shape"], model$estimate["scale"]))
     }
-    if(model$distname == "pareto"){
+    else if(model$distname == "pareto"){
         return(ks.test(data, "ppareto", model$estimate["shape"], model$estimate["scale"]))
     }
-    if(model$distname == "expweibull"){
+    else if(model$distname == "expweibull"){
         return(ks.test(data, "pexpweibull", model$estimate["lambda"], model$estimate["kappa"], model$estimate["alpha"]))
     }
-    if(model$distname == "chisq"){
+    else if(model$distname == "chisq"){
         return(ks.test(data, "pchisq", model$estimate["ncp"], model$estimate["df"]))
     }
-    if(model$distname == "geom"){
+    else if(model$distname == "geom"){
         return(ks.test(data, "pgeom", model$estimate["prob"]))
     }
+
 }
