@@ -24,4 +24,5 @@
 8. Pareto Distribution (pass as "pareto")
 9. Chi-Squared Distribution (pass as "chisq")
 10. Geometric Distribution (pass as "geom")
-11. Exponentiated Weibull (pass as "expweibull")
+11. Exponentiated Weibull (mle only) (pass as "expweibull")
+12. Exponentiated Exponential (mle only) (separate code, not to be passed to model.fit)
