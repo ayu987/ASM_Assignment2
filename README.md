@@ -24,3 +24,4 @@
 8. Pareto Distribution (pass as "pareto")
 9. Chi-Squared Distribution (pass as "chisq")
 10. Geometric Distribution (pass as "geom")
+11. Exponentiated Weibull (pass as "expweibull")
