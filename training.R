@@ -17,11 +17,23 @@ model.fit <- function(data, distribution, method){
     else if(distribution == "invgauss"){
         model <- fitdist(data[data>0], "invgauss", start = list(mean = 5, shape = 1))
     }
-    else if(distribution == "expweibull"){
+    else if(distribution == "expweibull" && method=="mle"){
         model <- fitdist(data[data>0], distr = distribution, start = list(kappa = 1, lambda = 1, alpha=1), method = method)
     }
     else if(distribution =='chisq'){
         model <- fitdist(data[data>0], distr = distribution, start = list(ncp=1, df=1), lower=c(0, 0),  method = method)
+    }
+    else if(distribution == "invweibull" && method == "mme"){
+    memp  <-  function(x, order) mean(x^order) 
+    model<- fitdist(data[data>0], "invweibull", method = "mme", order=c(1, 2), memp=memp, lower = c(0, 0))
+    }
+    else if(distribution == "pareto" && method == "mme"){
+    memp  <-  function(x, order) mean(x^order)
+    model<- fitdist(data[data>0], "pareto", method = "mme", order=c(1, 2), memp=memp, lower = c(0, 0))
+    }
+    else if(distribution == "expweibull" && method == "mme"){
+    memp  <-  function(x, order) mean(x^order)
+    model<- fitdist(data[data>0], "expweibull", method = "mme", order=c(1, 2, 3), memp=memp, lower = c(0, 0, 0), start = list(kappa = 1, lambda = 1, alpha=1))
     }
 
     else model <- fitdist(data[data>0], distr = distribution, method = method)
