@@ -1,7 +1,7 @@
 source("data_transformation.R")
 source("training.R")
-library(VGAM)
-library(reliaR)
+#library(VGAM)
+#library(reliaR)
 transform("data.csv", "_final_data.csv")
 
 data = read.csv("_final_data.csv")
