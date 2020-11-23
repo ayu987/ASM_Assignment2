@@ -1,0 +1,303 @@
+Fitting of the distribution ' expexp ' by maximum likelihood
+Parameters :
+rate 0.001209602
+shape 0.865218342
+
+AIC = 369.6154
+D = 0.13261, p-value = 0.7441
+alternative hypothesis: two-sided
+
+
+
+Fitting of the distribution ' expweibull ' by maximum likelihood 
+Parameters : 
+           estimate Std. Error
+kappa     2.2443363         NA
+lambda 1659.4469166         NA
+alpha     0.2895466         NA
+Loglikelihood:  -182.5752   AIC:  371.1505   BIC:  374.6847 
+Correlation matrix:
+[1] NA
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.16159, p-value = 0.482
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' exp ' by maximum likelihood 
+Parameters : 
+        estimate  Std. Error
+rate 0.001328462 0.002696244
+Loglikelihood:  -127.7076   AIC:  257.4151   BIC:  258.5932 
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.18419, p-value = 0.3237
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' chisq ' by maximum likelihood 
+Parameters : 
+        estimate Std. Error
+ncp 1.746553e+00         NA
+df  4.457581e-07         NA
+Loglikelihood:  -6600.115   AIC:  13204.23   BIC:  13206.59 
+Correlation matrix:
+[1] NA
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.96, p-value = 3.331e-16
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' weibull ' by maximum likelihood 
+Parameters : 
+         estimate Std. Error
+shape   0.9227408         NA
+scale 725.5583689         NA
+Loglikelihood:  -182.8471   AIC:  369.6942   BIC:  372.0503 
+Correlation matrix:
+[1] NA
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.15745, p-value = 0.5148
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' gamma ' by maximum likelihood 
+Parameters : 
+         estimate Std. Error
+shape 0.874965849         NA
+rate  0.001162036         NA
+Loglikelihood:  -182.8229   AIC:  369.6459   BIC:  372.002 
+Correlation matrix:
+[1] NA
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.15442, p-value = 0.5393
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' lnorm ' by maximum likelihood 
+Parameters : 
+        estimate Std. Error
+meanlog 5.953261  0.2685317
+sdlog   1.315531  0.1898801
+Loglikelihood:  -183.5146   AIC:  371.0292   BIC:  373.3853 
+Correlation matrix:
+        meanlog sdlog
+meanlog       1     0
+sdlog         0     1
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.17472, p-value = 0.3854
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' invweibull ' by maximum likelihood 
+Parameters : 
+         estimate Std. Error
+shape   0.8068942   0.127101
+scale 197.1265655  52.988641
+Loglikelihood:  -185.04   AIC:  374.0799   BIC:  376.436 
+Correlation matrix:
+           shape      scale
+shape  1.0000000 -0.3374493
+scale -0.3374493  1.0000000
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.95935, p-value = 3.331e-16
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' invgauss ' by maximum likelihood 
+Parameters : 
+      estimate Std. Error
+mean  753.8653  282.45932
+shape 224.7250   64.87227
+Loglikelihood:  -183.3941   AIC:  370.7882   BIC:  373.1443 
+Correlation matrix:
+              mean        shape
+mean   1.000000000 -0.001171783
+shape -0.001171783  1.000000000
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.23597, p-value = 0.1043
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' norm ' by maximum likelihood 
+Parameters : 
+     estimate Std. Error
+mean 752.7500   147.4867
+sd   722.5239   104.2848
+Loglikelihood:  -192.0405   AIC:  388.0811   BIC:  390.4372 
+Correlation matrix:
+     mean sd
+mean    1  0
+sd      0  1
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.21636, p-value = 0.1658
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' weibull ' by matching moments 
+Parameters : 
+        estimate
+shape   1.042084
+scale 765.306683
+Loglikelihood:  -183.1324   AIC:  370.2648   BIC:  372.6209 
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.1984, p-value = 0.2443
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' gamma ' by matching moments 
+Parameters : 
+         estimate
+shape 1.085418043
+rate  0.001441937
+Loglikelihood:  -183.214   AIC:  370.4279   BIC:  372.784 
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.20191, p-value = 0.2271
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' lnorm ' by matching moments 
+Parameters : 
+         estimate
+meanlog 6.2972311
+sdlog   0.8080867
+Loglikelihood:  -193.7959   AIC:  391.5919   BIC:  393.948 
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.31086, p-value = 0.01209
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' invweibull ' by matching moments 
+Parameters : 
+        estimate
+shape   2.568308
+scale 513.723702
+Loglikelihood:  -1804.773   AIC:  3613.547   BIC:  3615.903 
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.96, p-value = 3.331e-16
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' invgauss ' by maximum likelihood 
+Parameters : 
+      estimate Std. Error
+mean  753.8653  282.45932
+shape 224.7250   64.87227
+Loglikelihood:  -183.3941   AIC:  370.7882   BIC:  373.1443 
+Correlation matrix:
+              mean        shape
+mean   1.000000000 -0.001171783
+shape -0.001171783  1.000000000
+
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.23597, p-value = 0.1043
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' norm ' by matching moments 
+Parameters : 
+     estimate
+mean 752.7500
+sd   722.5239
+Loglikelihood:  -192.0405   AIC:  388.0811   BIC:  390.4372 
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.21636, p-value = 0.1658
+alternative hypothesis: two-sided
+
+
+
+
+Fitting of the distribution ' exp ' by matching moments 
+Parameters : 
+       estimate
+rate 0.01328462
+Loglikelihood:  -182.9696   AIC:  367.9392   BIC:  369.1172 
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  data
+D = 0.56636, p-value = 4.211e-08
+alternative hypothesis: two-sided
+
+
+
+

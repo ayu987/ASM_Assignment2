@@ -18,7 +18,7 @@ model.fit <- function(data, distribution, method){
         model <- fitdist(data[data>0], "invgauss", start = list(mean = 5, shape = 1))
     }
     else if(distribution == "expweibull" && method=="mle"){
-        model <- fitdist(data[data>0], distr = distribution, start = list(kappa = 1, lambda = 1, alpha=1), method = method)
+        model <- fitdist(data[data>0], distr = distribution, start = list(kappa = 1, lambda = 1, alpha=1), method = method, lower = c(0,0,0))
     }
     else if(distribution =='chisq'){
         model <- fitdist(data[data>0], distr = distribution, start = list(ncp=1, df=1), lower=c(0, 0),  method = method)

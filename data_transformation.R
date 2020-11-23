@@ -9,7 +9,7 @@ transform <- function(input_file, output_file){
 
     interevent_count = 0
     for (row in 1:nrow(data)){
-        if(as.double(data[row, "MAG"]) < 6){
+        if(as.double(data[row, "MAG"]) < 6.5){
             interevent_count = interevent_count + 1
         }
         else{
